@@ -9,7 +9,7 @@ class BlocCounterHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<CounterBloc>(
-      create: (_) => CounterBloc(0),
+      create: (_) => CounterBloc(),
       child: BlocCounterPage(),
     );
   }

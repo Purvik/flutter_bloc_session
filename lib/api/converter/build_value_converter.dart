@@ -28,7 +28,7 @@ class BuiltValueConverter extends JsonConverter {
         _convertToCustomObject<SingleItemType>(dynamicResponse.body);
 
     // Return the original dynamicResponse with a no-longer-dynamic body type.
-    return dynamicResponse.replace<BodyType>(body: customBody);
+    return dynamicResponse.copyWith<BodyType>(body: customBody);
   }
 
   dynamic _convertToCustomObject<SingleItemType>(dynamic element) {
